@@ -1,11 +1,11 @@
 import Koa from "koa";
 import initConnectors from "./connectors";
-// import routes from "./routes";
+import routes from "./routes";
 
 const PORT = 5000;
 const app = new Koa();
 
-// app.use(routes);
+app.use(routes);
 
 app.use(async ctx => {
   ctx.body = "<h1>Summary<h1>";
