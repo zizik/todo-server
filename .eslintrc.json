@@ -10,6 +10,16 @@
   "extends": ["airbnb-base/legacy"],
   "rules": {
     "quotes": ["error", "double"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "always",
+        "imports": "never",
+        "exports": "never",
+        "functions": "ignore"
+      }
+    ],
     "no-console": 0
   }
 }
