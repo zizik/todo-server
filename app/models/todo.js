@@ -7,7 +7,7 @@ const TodoSchema = new Schema(
       required: "Todo is required",
       trim: true,
     },
-    firstName: {
+    isComplete: {
       type: Boolean,
       default: false,
     },

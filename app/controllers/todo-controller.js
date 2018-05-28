@@ -3,8 +3,7 @@ import { Todo } from "../models";
 export default {
   async addTodo(ctx) {
     try {
-      console.log(ctx);
-      await Todo.create({ todo: "Test" });
+      await Todo.create(ctx.request.body);
     } catch (e) {
       throw Error("Cant create todo");
     }
