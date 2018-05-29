@@ -12,4 +12,11 @@ export default {
     ctx.body = { data };
     ctx.status = 200;
   },
+  async updateTodo(ctx) {
+    const todo = await Todo.findTodo(ctx.params.id);
+    const updatedTodo = await Todo.updateTodo(ctx.request.body, todo);
+
+    ctx.body = { data: updatedTodo };
+    ctx.status = 200;
+  },
 };

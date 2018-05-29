@@ -21,12 +21,17 @@ TodoSchema.statics.addTodo = function addTodo(data) {
   return this.create(data);
 };
 
-TodoSchema.statics.findTodo = function findTodo(id) {
-  return this.findOne(id).select({ __v: 0, createdAt: 0, updatedAt: 0 });
+TodoSchema.statics.findTodo = function findTodo(_id) {
+  return this.findOne({ _id }).select({ __v: 0, createdAt: 0, updatedAt: 0 });
 };
 
 TodoSchema.statics.getAllTodos = function getAllTodos() {
   return this.find({}).select({ __v: 0, createdAt: 0, updatedAt: 0 });
+};
+
+TodoSchema.statics.updateTodo = function updateTodo(data, todo) {
+  todo.set(data);
+  return todo.save();
 };
 
 export default mongoose.model("todo", TodoSchema);
