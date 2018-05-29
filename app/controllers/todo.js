@@ -7,4 +7,9 @@ export default {
     ctx.body = { data };
     ctx.status = 201;
   },
+  async getAllTodos(ctx) {
+    const data = await Todo.getAllTodos();
+    ctx.body = { data };
+    ctx.status = 200;
+  },
 };

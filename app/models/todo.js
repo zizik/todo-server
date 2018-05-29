@@ -25,4 +25,8 @@ TodoSchema.statics.findTodo = function findTodo(id) {
   return this.findOne(id).select({ __v: 0, createdAt: 0, updatedAt: 0 });
 };
 
+TodoSchema.statics.getAllTodos = function getAllTodos() {
+  return this.find({}).select({ __v: 0, createdAt: 0, updatedAt: 0 });
+};
+
 export default mongoose.model("todo", TodoSchema);

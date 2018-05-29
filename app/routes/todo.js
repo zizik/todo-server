@@ -3,6 +3,6 @@ import { todoController } from "../controllers";
 
 const router = new Router({ prefix: "/todo" });
 
-router.post("/add", todoController.addTodo);
+router.post("/add", todoController.addTodo).get("/all", todoController.getAllTodos);
 
 export default router.routes();

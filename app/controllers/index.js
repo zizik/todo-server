@@ -1,7 +1,3 @@
-import TodoController from "./todo";
+import todoController from "./todo";
 
-export const todoController = TodoController;
-
-export default {
-  todoController,
-};
+export { todoController };
