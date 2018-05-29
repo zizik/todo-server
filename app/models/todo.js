@@ -17,4 +17,12 @@ const TodoSchema = new Schema(
   },
 );
 
+TodoSchema.statics.addTodo = function addTodo(data) {
+  return this.create(data);
+};
+
+TodoSchema.statics.findTodo = function findTodo(id) {
+  return this.findOne(id).select({ __v: 0, createdAt: 0, updatedAt: 0 });
+};
+
 export default mongoose.model("todo", TodoSchema);

@@ -3,10 +3,12 @@ import bodyParser from "koa-bodyparser";
 
 import initConnectors from "./connectors";
 import routes from "./routes";
+import appError from "./helpers/appError";
 
 const PORT = 5000;
 const app = new Koa();
 
+app.use(appError());
 app.use(bodyParser());
 app.use(routes);
 

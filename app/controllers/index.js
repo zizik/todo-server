@@ -1,4 +1,4 @@
-import TodoController from "./todo-controller";
+import TodoController from "./todo";
 
 export const todoController = TodoController;
 
