@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec npm run server",
-    "server": "babel-node ./app/server.js"
+    "server": "babel-node ./app/server.js",
+    "seeds": "babel-node ./app/seeds"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0",
+    "faker": "^4.1.0",
     "nodemon": "^1.17.5"
   }
 }
