@@ -4,8 +4,8 @@ import bodyParser from "koa-bodyparser";
 import initConnectors from "./connectors";
 import routes from "./routes";
 import appError from "./helpers/appError";
+import { PORT } from "./config";
 
-const PORT = 5000;
 const app = new Koa();
 
 app.use(appError());

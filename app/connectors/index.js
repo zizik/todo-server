@@ -1,6 +1,5 @@
 import mongooseConnector from "./mongoose-connector";
-
-const MONGO_URI = "mongodb://zizik:zizik@ds231460.mlab.com:31460/todo";
+import { MONGO_URI } from "../config";
 
 async function connectorsInit(server) {
   try {
