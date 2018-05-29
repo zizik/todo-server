@@ -13,10 +13,23 @@ export default {
     ctx.status = 200;
   },
   async updateTodo(ctx) {
-    const todo = await Todo.findTodo(ctx.params.id);
+    const { id } = ctx.params;
+    const todo = await Todo.findTodo(id);
+    if (!todo) {
+      ctx.throw(400, `Can't find todo with id = ${id}`);
+    }
     const updatedTodo = await Todo.updateTodo(ctx.request.body, todo);
-
     ctx.body = { data: updatedTodo };
+    ctx.status = 200;
+  },
+  async deleteTodo(ctx) {
+    const { id } = ctx.params;
+    const todo = await Todo.findTodo(id);
+    if (!todo) {
+      ctx.throw(400, `Can't find todo with id = ${id}`);
+    }
+    todo.remove();
+    ctx.body = { data: { id } };
     ctx.status = 200;
   },
 };
