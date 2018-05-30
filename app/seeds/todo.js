@@ -6,7 +6,7 @@ export default () => {
 
   for (let i = 0; i < 20; i++) {
     const todoPromise = Todo.create({
-      todo: `${faker.lorem.sentence()}`,
+      description: `${faker.lorem.sentence()}`,
       isComplete: faker.random.boolean(),
     });
 

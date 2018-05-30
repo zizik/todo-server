@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const TodoSchema = new Schema(
   {
-    todo: {
+    description: {
       type: String,
       required: "Todo is required",
       trim: true,
