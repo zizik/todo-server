@@ -7,9 +7,22 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": ["airbnb-base/legacy"],
+  "globals": {
+    "test": true,
+    "expect": true,
+    "beforeAll": true,
+    "afterAll": true,
+    "it": true,
+    "describe": true
+  },
+  "extends": [
+    "airbnb-base/legacy"
+  ],
   "rules": {
-    "quotes": ["error", "double"],
+    "quotes": [
+      "error",
+      "double"
+    ],
     "comma-dangle": [
       "error",
       {
@@ -22,6 +35,11 @@
     ],
     "object-curly-newline": 0,
     "no-console": 0,
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ]
   }
 }
